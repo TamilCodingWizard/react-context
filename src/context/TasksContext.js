@@ -20,7 +20,7 @@ const tasksReducer = (state,action) => {
         case 'GET_TASKS':
             return state.tasksList
         case 'SET_SELECTED_TASK':
-            return {...state,selectedTask:action.payload}
+            return {...state,selectedTask:{...action.payload}}
         case 'GET_SELECTED_TASK':
             return state.selectedTask
         default:
